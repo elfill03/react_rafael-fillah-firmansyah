@@ -4,6 +4,6 @@ Tiga poin penting yang telah saya perlajari dari materi “Introduction FE” se
 3.	Pengenalan mengenai version control dari suatu project atau website, dimana setiap versi dapat direvisi dan diubah kemudian di-update menggunakan git dan github. Selain itu adanya Package Manager yang berfungsi untuk menambahkan, mengubah dan menghapus paket software. Package yang dikenalkan yaitu yarn dan npm.
 
 Tiga poin penting yang telah saya perlajari dari materi “Github” sebagai berikut:
-1.  Pembuatan akun Github, repositori(public/private), upload file, branch dll.
+1.  Pembuatan akun Github, repositori(public/private), upload folder & file, branch dll.
 2.  Penjelasan mengenai Github serta cara penggunaannya.
 3.  Cara menghubungkan dengan file lokal menggunakan Git.
