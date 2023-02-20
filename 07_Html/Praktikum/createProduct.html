@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Product By:Rafael Fillah</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: lighter;
+        }
+        .judul h1{
+            font-size: 32px;
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+        .judul h2{
+            font-size: 24px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        form{
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .sub-judul{
+            font-size: 14px;
+            width: 100%;
+            margin-bottom: 5px;
+        }
+        .teks{
+            margin-bottom: 10px;
+            width: 160px;
+        }
+        select{
+            margin-bottom: 10px;
+            width: 85px;
+            cursor: pointer;
+        }
+        .btn-radio{
+            display: flex;
+            margin-bottom: 5px;
+        }
+        .btn-radio input{
+            cursor: pointer;
+        }
+        .btn-radio label{
+            margin-left: 5px;
+            font-size: 13px;
+        }
+        .upload-file{
+            margin-top: 5px;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        #txt{
+            width: 240px;
+        }
+        .price{
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .harga{
+            border: 2px solid;
+            color: #827F7F;
+            padding-top: 2px;
+            padding-bottom: 2px;
+            font-size: 14px;
+            text-align: center;
+            width: 55px;
+        }
+        .btn{
+            padding-top: 2px;
+            padding-bottom: 2px;
+            margin-top: 10px;
+            width: 50px;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="judul">
+        <h1>Create Product</h1>
+        <h2>Detail Product</h2>
+    </div>
+
+    <form>
+        <label class="sub-judul">Product name :</label>
+        <input type="text" class="teks">
+
+        <label class="sub-judul">Product Category :</label>
+        <select>
+            <option hidden></option>
+            <option>Rafael</option>
+            <option>Fillah</option>
+            <option>Firmansyah</option>
+        </select>
+
+        <label class="sub-judul">Product Freshness :</label>
+        <div class="btn-radio">
+            <input type="radio" id="first" name="inp-radio" value="Brand New">
+            <label for="first">Brand New</label>
+        </div>
+        <div class="btn-radio">
+            <input type="radio" id="second" name="inp-radio" value="Second Hank">
+            <label for="second">Second Hank</label>
+        </div>
+        <div class="btn-radio">
+            <input type="radio" id="third" name="inp-radio" value="Refurbished">
+            <label for="third">Refurbished</label>
+        </div>
+        
+        <label class="upload-file">Image of Product <input type="file"></label>
+
+        <label class="sub-judul">Additional Description</label>
+        <textarea id="txt" cols="33" rows="5"></textarea>
+
+        <div class="price">
+            <label class="sub-judul">Product Price :</label>
+            <label class="harga">$ 100</label>
+            <input type="submit" class="btn">
+        </div>
+    </form>
+</body>
+</html>
