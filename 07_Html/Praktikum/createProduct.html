@@ -76,7 +76,7 @@
             text-align: center;
             width: 55px;
         }
-        .btn{
+        .btn-submit{
             padding-top: 2px;
             padding-bottom: 2px;
             margin-top: 10px;
@@ -91,21 +91,24 @@
         <h2>Detail Product</h2>
     </div>
 
-    <form>
+    <form action="">
+        <!-- Nama Product -->
         <label class="sub-judul">Product name :</label>
-        <input type="text" class="teks">
+        <input type="text" class="teks" required minlength="6" maxlength="50">
 
+        <!-- Kategori Product -->
         <label class="sub-judul">Product Category :</label>
-        <select>
+        <select required>
             <option hidden></option>
             <option>Rafael</option>
             <option>Fillah</option>
             <option>Firmansyah</option>
         </select>
 
+        <!-- Pilihan Product -->
         <label class="sub-judul">Product Freshness :</label>
-        <div class="btn-radio">
-            <input type="radio" id="first" name="inp-radio" value="Brand New">
+        <div class="btn-radio" >
+            <input type="radio" id="first" name="inp-radio" value="Brand New" required>
             <label for="first">Brand New</label>
         </div>
         <div class="btn-radio">
@@ -117,16 +120,19 @@
             <label for="third">Refurbished</label>
         </div>
         
-        <label class="upload-file">Image of Product <input type="file"></label>
+        <!-- Gambar Product -->
+        <label class="upload-file">Image of Product <input type="file" required></label>
 
+        <!-- Deskripsi Product -->
         <label class="sub-judul">Additional Description</label>
-        <textarea id="txt" cols="33" rows="5"></textarea>
+        <textarea id="txt" cols="33" rows="5" required></textarea>
 
+        <!-- Harga Product -->
         <div class="price">
             <label class="sub-judul">Product Price :</label>
-            <label><input type="text" class="harga" placeholder="$ 100"></label>
-            <input type="submit" class="btn">
+            <label><input type="number" class="harga" placeholder="$ 100" required></label>
         </div>
+        <input type="submit" class="btn-submit">
     </form>
 </body>
 </html>
