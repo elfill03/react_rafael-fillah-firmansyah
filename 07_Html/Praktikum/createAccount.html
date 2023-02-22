@@ -7,13 +7,150 @@
     <title>Create Account By:Rafael Fillah</title>
     <style>
         *{
-            padding: 0;
             margin: 0;
+            padding: 0;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: lighter;
         }
-        
+        .judul h1{
+            font-size: 32px;
+            margin-top: 20px;
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+        .judul h2{
+            font-size: 24px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+        }
+        form{
+            margin-left: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .sub-judul{
+            font-size: 14px;
+            width: 100%;
+
+        }
+        .teks{
+            margin-bottom: 10px;
+            width: 160px;
+        }
+        .btn-radio{
+            display: flex;
+            margin-bottom: 5px;
+        }
+        .btn-radio input{
+            cursor: pointer;
+        }
+        .btn-radio label{
+            margin-left: 5px;
+            font-size: 13px;
+        }
+        select{
+            margin-bottom: 10px;
+            width: 85px;
+            cursor: pointer;
+        }
+        h4{
+            font-size: 12px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        .language{
+            display: flex;
+            flex-direction: column;
+            margin-right: auto;
+            font-size: 14px;
+        }
+        .language-flx{
+            margin-top: 5px;
+            display: flex;
+        }
+        .language-flx label{
+            margin-left: 5px;
+        }
+        .btn-create{
+            padding-top: 2px;
+            padding-bottom: 2px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            width: 95px;
+        }
     </style>
 </head>
 <body>
-    
+    <div class="judul">
+        <h1>Create Account</h1>
+        <h2>Detail Form</h2>
+    </div>
+
+    <form action="">
+        <!-- Create Account -->
+        <label class="sub-judul">First name :</label>
+        <input type="text" class="teks" required minlength="6" maxlength="50">
+
+        <label class="sub-judul">Last name :</label>
+        <input type="text" class="teks" required minlength="6" maxlength="50">
+
+        <label class="sub-judul">Username :</label>
+        <input type="text" class="teks" required minlength="6" maxlength="50">
+
+        <label class="sub-judul">Email :</label>
+        <input type="text" class="teks" required minlength="6" maxlength="50">
+
+        <!-- Gender -->
+        <label class="sub-judul">Gender :</label>
+        <div class="btn-radio" >
+            <input type="radio" id="first" name="inp-radio" value="Male" required>
+            <label for="Male">Male</label>
+        </div>
+        <div class="btn-radio">
+            <input type="radio" id="second" name="inp-radio" value="Female">
+            <label for="Female">Female</label>
+        </div>
+        <div class="btn-radio">
+            <input type="radio" id="third" name="inp-radio" value="Other">
+            <label for="Other">Other</label>
+        </div>
+
+        <!-- Addres -->
+        <label class="sub-judul">Address :</label>
+        <input type="text" class="teks" required minlength="6" maxlength="50">
+
+        <label class="sub-judul">Address 2 :</label>
+        <input type="text" class="teks" required minlength="6" maxlength="50">
+
+        <!-- Nasionality -->
+        <label class="sub-judul">Nasionality :</label>
+        <h4>Nasionality</h4>
+        <select required>
+            <option hidden></option>
+            <option>Indonesia</option>
+            <option>England</option>
+            <option>USA</option>
+        </select>
+
+        <!-- Language -->
+        <div class="language">
+            <label class="sub-judul">Language Spoken :</label>
+            <div class="language-flx">
+                <input type="checkbox" id="Language1" name="Language" value="Bahasa Indonesia" required>
+                <label for="Language1"> Bahasa Indonesia</label>
+            </div>
+            <div class="language-flx">
+                <input type="checkbox" id="Language2" name="Language2" value="English">
+                <label for="Language2"> English</label>
+            </div>
+            <div class="language-flx">
+                <input type="checkbox" id="Language3" name="Language3" value="Other">
+                <label for="Language3"> Other</label>
+            </div>
+        </div>
+
+        <button type="button" class="btn-create">Create Account</button>
+    </form>
+
 </body>
 </html>
