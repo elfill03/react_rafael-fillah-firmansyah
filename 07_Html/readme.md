@@ -1,1 +1,4 @@
-Testing
+Tiga poin penting yang telah saya pelajari dari materi “Html” sebagai berikut:
+1.	Html (HyperText Markup Language) merupakan sebuah bahasa pemrograman untuk membuat website. Jika di ibaratkan manusia html adalah sebuah kerangka tulang, untuk menjadi manusia utuh atau website utuh diperlukannya penggerak(javaScript) dan pemberi tampilan(CSS).
+2.	Memahami tentang element, atribut, tag pembuka dan tag penutup yang ada pada html. Selain itu adapun tag DOCTYPE, tag html, tag head, dan tag body yang memiliki fungsi berbeda satu sama lainnya.
+3.	Dalam html terdapat sebuah form, tabel, gambar, video, link dan lain sebagainya yang dapat digunakan sebagai pelengkap sebuah website. Ketika website dirasa telah cukup atau berfungsi sebagai semestinya maka web yang dibuat dapat di deploy(hosting) agar dapat dibuka/digunakan oleh orang lain.
