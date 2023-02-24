@@ -50,10 +50,18 @@ header h1{
     color: #FFFFFF;
     background-color: #47B2E4;
     border-radius: 50px;
+    box-shadow: 0 0 10px #47B2E4;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
 }
 .watch-bag1:hover{
     color: #FFFFFF;
     background-color: #2284b2;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 .watch-bag2{
     padding-left: 20px;
@@ -67,16 +75,28 @@ header h1{
     background-color: #37517E;
     font-family: 'Open Sans', sans-serif;
     border-radius: 50px;
+    box-shadow: 0 0 10px #47B2E4;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
 }
 .watch-bag2:hover{
     color: #FFFFFF;
     background-color: #47B2E4;
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 img{
     width: min(100% - 10px, 450px);
     height: 350px;
     margin: auto;
     margin-left: 10px;
+    transition: width 2s;
+}
+img:hover{
+    width: min(100% - 10px, 500px);
 }
 .join{
     background-color: #F3F5FA;
@@ -114,10 +134,18 @@ p{
     color: #FFFFFF;
     border-radius: 50px;
     cursor: pointer;
+    box-shadow: 0 0 10px #47B2E4;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: box-shadow, transform;
+    transition-property: box-shadow, transform;
 }
 .start:hover{
     color: #FFFFFF;
     background-color: #2284b2;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
 }
 .detail{
     display: grid;
