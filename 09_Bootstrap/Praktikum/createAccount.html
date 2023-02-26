@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account By:Rafael Fillah</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Simple Header</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav ms-auto">
+                <button type="button" class="btn btn-primary me-2">Primary</button>
+              <a class="nav-link me-2" href="#" style="color: #0D6EFD;">Features</a>
+              <a class="nav-link me-2" href="#" style="color: #0D6EFD;">Pricing</a>
+              <a class="nav-link me-2" href="#" style="color: #0D6EFD;">FAQs</a>
+              <a class="nav-link" href="#" style="color: #0D6EFD;">About</a>
+            </div>
+          </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="d-grid">
+            <a class="navbar-brand d-flex justify-content-center mt-4" href="#">
+                <img src="src/bootstrap-logo.svg" alt="Bootstrap" width="50" height="44">
+            </a>
+            <div class="text-center mt-4 mb-4">
+                <h1 class="fs-2 fw-bold">Create Account</h1>
+                <h2 class="fs-4 fw-lighter">Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</h2>
+            </div>
+        
+            <form class="needs-validation" novalidate>
+                <div class="d-grid m-auto has-validation" style="width: min(100% - 10px, 65%);">
+                    <h1 class="fs-3 fw-bold">Detail Form</h1>
+
+                    <!-- Create Account -->
+                    <div class="row">
+                        <div class="col">
+                            <label for="First name" class="form-label">First name</label>
+                             <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+                        </div>
+                        <div class="col">
+                            <label for="Last name" class="form-label">Last Name</label>
+                            <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+                        </div>
+                    </div>
+                
+                    <div class="mt-2">
+                        <label for="username" class="form-label">User name</label>
+                        <label class="visually-hidden" for="specificSizeInputGroupUsername">Username</label>
+                        <div class=" input-group m-auto" style="width: min(100% - 10px, 100%);">
+                        <div class="input-group-text">@</div>
+                        <input type="text" class="form-control" id="specificSizeInputGroupUsername" placeholder="Username" >
+                        </div>
+
+
+                        <button type="submit" class="btn btn-primary m-auto mt-5 mb-5" style="width: min(100% - 10px, 90%);">Submit</button>
+                    </div>
+                </div>
+            </form>
+
+            <div class="container m-auto text-center">
+                <h1 class="fw-bold fs-2">List Product</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mb-0">
+        <table class="table table-light table-striped" style="width: min(100% - 10px, 65%);">
+            <thead>
+                <tr>
+                  <th scope="col">No</th>
+                  <th scope="col">Product Name</th>
+                  <th scope="col">Product Category</th>
+                  <th scope="col">Image of Product</th>
+                  <th scope="col">Product Freshness</th>
+                  <th scope="col">Additional Desciption</th>
+                  <th scope="col">Product Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">1</th>
+                  <td>Lorem</td>
+                  <td>ipsum</td>
+                  <td>dolor</td>
+                  <td>Brand new</td>
+                  <td>adipiscing</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <th scope="row">2</th>
+                  <td>Lorem</td>
+                  <td>ipsum</td>
+                  <td>dolor</td>
+                  <td>Second Hand</td>
+                  <td>adipiscing</td>
+                  <td>10</td>
+                </tr>
+                <tr>
+                  <th scope="row">3</th>
+                  <td>Lorem</td>
+                  <td>ipsum</td>
+                  <td>dolor</td>
+                  <td>Brand new</td>
+                  <td>adipiscing</td>
+                  <td>20</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Lorem</td>
+                    <td>ipsum</td>
+                    <td>dolor</td>
+                    <td>Refushed</td>
+                    <td>adipiscing</td>
+                    <td>9</td>
+                </tr>
+              </tbody>
+        </table>
+        <input class="form-control" type="search" placeholder="Search by Product Name" aria-label="Search" style="width: 18%">
+        <div class="d-flex">
+            <button type="button" class="btn btn-primary">Deletion</button>
+            <button class="btn btn-outline-primary  border border-primary" type="submit">Search</button>
+        </div>
+    </div>
+
+
+    <script>
+        (() => {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            const forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.from(forms).forEach(form => {
+                form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+                }, false)
+            })
+            })()
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+
+
+    <form action="">
+        <!-- Create Account -->
+        <label class="sub-judul">First name :</label>
+        <input type="text" class="teks" required minlength="6" maxlength="50">
+
+        <label class="sub-judul">Last name :</label>
+        <input type="text" class="teks" required minlength="6" maxlength="50">
+
+        <label class="sub-judul">Username :</label>
+        <input type="text" class="teks" required minlength="6" maxlength="50">
+
+        <label class="sub-judul">Email :</label>
+        <input type="text" class="teks" required minlength="6" maxlength="50">
+
+        <!-- Gender -->
+        <label class="sub-judul">Gender :</label>
+        <div class="btn-radio" >
+            <input type="radio" id="first" name="inp-radio" value="Male" required>
+            <label for="Male">Male</label>
+        </div>
+        <div class="btn-radio">
+            <input type="radio" id="second" name="inp-radio" value="Female">
+            <label for="Female">Female</label>
+        </div>
+        <div class="btn-radio">
+            <input type="radio" id="third" name="inp-radio" value="Other">
+            <label for="Other">Other</label>
+        </div>
+
+        <!-- Addres -->
+        <label class="sub-judul">Address :</label>
+        <input type="text" class="teks" required minlength="6" maxlength="50">
+
+        <label class="sub-judul">Address 2 :</label>
+        <input type="text" class="teks" required minlength="6" maxlength="50">
+
+        <!-- Nasionality -->
+        <label class="sub-judul">Nasionality :</label>
+        <h4>Nasionality</h4>
+        <select required>
+            <option hidden></option>
+            <option>Indonesia</option>
+            <option>England</option>
+            <option>USA</option>
+        </select>
+
+        <!-- Language -->
+        <div class="language">
+            <label class="sub-judul">Language Spoken :</label>
+            <div class="language-flx">
+                <input type="checkbox" id="Language1" name="Language" value="Bahasa Indonesia" required>
+                <label for="Language1"> Bahasa Indonesia</label>
+            </div>
+            <div class="language-flx">
+                <input type="checkbox" id="Language2" name="Language2" value="English">
+                <label for="Language2"> English</label>
+            </div>
+            <div class="language-flx">
+                <input type="checkbox" id="Language3" name="Language3" value="Other">
+                <label for="Language3"> Other</label>
+            </div>
+        </div>
+
+        <button type="button" class="btn-create">Create Account</button>
+    </form>
+
+</body>
+</html>
