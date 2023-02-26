@@ -1,1 +1,4 @@
-Testing
+Tiga poin penting yang telah saya pelajari dari materi “css” sebagai berikut:
+1.	Pertama mengenai penambahan css kedalam html terbagi menjadi 3 cara (external,internal, dan inline), setiap cara memiliki fungsi yang berbeda-beda teatapi dapat digunakan secara Bersama. Dari ketiga cara tersebut terdapat urutan prioritas, yang paling utama merupakan pada bagian inline, kemudian internal/external. 
+2.	Dalam penggunaan css terdapat selector, tag, & group. Yang dimaksud mengenai selector, tag, dan group merupakan penamaan class, tag header, tag nav, tag div, font (h1-h6) dan lain sebagainya.
+3.	Pada css kita dapat mengatur font sesuai keinginan, dengan beberapa syntax, contohnya font-family untuk jenis font, font-size untuk ukuran dll. Selain itu adapun margin&padding yang berguna untuk mengatur jarak dan ukuran dari sebuah content. Pada sebuah halaman website dapat diberi background berupa gambar ataupun warna dengan cara background-color/img. Masih banyak code lainnya yang telah saya pelajari, mohon maaf saya tidak dapat menyebutkan semuanya.
