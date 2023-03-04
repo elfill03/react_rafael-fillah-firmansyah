@@ -1,1 +1,4 @@
-Testing
+Tiga poin penting yang telah saya pelajari dari materi “JavaScript Refreshment” sebagai berikut:
+  1.	JavaScript merupakan Bahasa pemrograman tingkat tinggi yang dapat digunakan untuk membuat berbagai aplikasi dengan jenis platform yang berbeda-beda. Dalam JavaScript terdapat 3 cara pembuatan variabel yaitu var, let, dan const. Masing-masing cara memiliki perbedaan dalam pemakaiannya.
+  2.	Selain cara pembuatan variabel, pada JavaScript terdapat Destructuring, Method, Control Flow, Function, Async-Await yang memiliki fungsi berbeda-beda. Setiap     bagian/code pada JavaScript dapat saling berhubungan tergantung pemakaian oleh programmer itu sendiri.
+  3.	Terakhir adanya DOM (Document Object Model), DOM digunakan untuk mengubah tampilan sebuah situs web secara dinamis. Penggunaan DOM cukup banyak, diantaranya document.getElementById, document.getElementsByTagName, document.querySelector,dan masih banyak lainnya. Setiap cara memiliki fungsi utama yang sama yaitu mengakses/mengambil/menyalurkan variabel dari DOM yang digunakan.
