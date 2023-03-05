@@ -8,6 +8,7 @@ const productDescription = document.getElementById('Description');
 const productPrice = document.getElementById('productprice');
 const submitButton = document.getElementById('submit');
 const tableData = document.querySelector('#tableData tbody');
+let counter = 0;
 
 form.addEventListener('submit', (event) => {
     event.preventDefault();
@@ -57,34 +58,32 @@ form.addEventListener('submit', (event) => {
         const alertElement = document.getElementById("alert");
         alertElement.innerHTML = message;
         alertElement.removeAttribute("hidden"); 
-    }
-    else if(submitButton) {
-        const product = {
-            name: productName.value,
-            category: productCategory.value,
-            freshness: document.querySelector('input[name="flexRadioDefault"]:checked').value,
-            image: productImage.value,
-            description: productDescription.value,
-            price: productPrice.value
-        };
-          
-        // Membuat elemen <tr> baru
-        const newRow = document.createElement('tr');
-          
-        // Mengisi nilai dari tiap <td> dengan data produk
-        newRow.innerHTML = `
-            <td>${tableData.rows.length}</td>
-            <td>${product.name}</td>
-            <td>${product.category}</td>
-            <td><img src="${product.image}" alt="Product image"></td>
-            <td>${product.freshness}</td>
-            <td>${product.description}</td>
-            <td>${product.price}</td>
-          `;
-          
-        // Menambahkan <tr> baru ke dalam tabel
-        tableData.appendChild(newRow);
-        form.reset();
+
+         // Menambahkan data inputan kedalam tabel
+         const row = tableData.insertRow();
+         counter++;
+
+         const cellNumber = row.insertCell();
+         cellNumber.innerHTML = counter;
+ 
+         const cellName = row.insertCell();
+         cellName.innerHTML = productName.value;
+ 
+         const cellCategory = row.insertCell();
+         cellCategory.innerHTML = productCategory.value;
+ 
+         const cellImage = row.insertCell();
+         cellImage.innerHTML = `<img src="${productImage.value}" width="100">`;
+ 
+         const cellFreshness = row.insertCell();
+         cellFreshness.innerHTML = productFreshness[0].value;
+
+         const cellDescription = row.insertCell();
+         cellDescription.innerHTML = productDescription.value;
+
+         const cellPrice = row.insertCell();
+         cellPrice.innerHTML = productPrice.value;
+         form.reset();
     }
 });
 
