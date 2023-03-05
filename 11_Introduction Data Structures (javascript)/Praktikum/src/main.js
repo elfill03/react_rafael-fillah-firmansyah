@@ -87,3 +87,12 @@ form.addEventListener('submit', (event) => {
     }
 });
 
+// Soal Eksplorasi
+const deleteButton = document.getElementById('delete-btn');
+deleteButton.addEventListener('click', () => {
+  const rowCount = tableData.rows.length;
+  if (rowCount > 1) {
+    tableData.deleteRow(rowCount - 1);
+    counter--;
+  }
+});
