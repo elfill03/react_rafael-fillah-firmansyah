@@ -1,1 +1,4 @@
-Testing
+Tiga poin penting yang telah saya pelajari dari materi “Clean Code” sebagai berikut:
+1.	Clean Code adalah sebuah istilah untuk code program yang mudah untuk dibaca, dipahami oleh programmer satu sama lain. Clean Code cukup penting karena biasanya project dilakukan oleh lebih dari satu orang programmer.
+2.	Terdapat beberapa syarat/ketentuan bahwa code sudah dapat dianggap clean, diantaranya yaitu; mudah dipahami, mudah dieja, mudah dicari, singkat namun mendetail, konsisten, dan lain sebagainya.
+3.	Sebisa mungkin dalam membuat code lakukan peraturan KISS (Keep It So Simple) dimana code program hanya digunakan satu function dalam satu tugas yang digunakan, tidak terlalu menggunakan banyak argument.  DRY (Don’t Repeat Yourself), sebuah code seringkali dicopy dan paster untuk mencoba, mengubah, dan menerapkan code akan tetapi sebisa mungkin dalam pembuatan function dapat digunakan berkali-kali.
