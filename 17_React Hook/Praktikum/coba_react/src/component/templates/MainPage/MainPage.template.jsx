@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { LinkBs } from "../../atoms";
-import { Form, ListProduct, Navbar } from "../../organism";
-import "./MainPage.template.style.css"
+import { Form, Navbar } from "../../organism";
+import "./MainPage.template.style.css";
 
 const MainPage = () => {
   useEffect(() => {
@@ -11,9 +11,8 @@ const MainPage = () => {
   return (
     <>
       <LinkBs />
-      <Navbar/>
-      <Form/>
-      <ListProduct/>
+      <Navbar />
+      <Form />
     </>
   );
 };

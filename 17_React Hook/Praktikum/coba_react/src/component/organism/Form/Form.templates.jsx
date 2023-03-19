@@ -5,7 +5,15 @@ import {
   ButtonEdit,
   ButtonGenerateNumber,
 } from "../../atoms";
-import { ProductDescription, ProductImage, Title } from "../../molecules";
+import {
+  ProductCategory,
+  ProductDescription,
+  ProductFreshness,
+  ProductImage,
+  ProductName,
+  ProductPrice,
+  Title,
+} from "../../molecules";
 
 const Form = () => {
   const [productName, setProductName] = useState("");
@@ -40,6 +48,17 @@ const Form = () => {
     setProductPrice("");
   };
 
+  const deleteProduct = (index) => {
+    const isConfirmed = window.confirm(
+      "Are you sure you want to delete this product?"
+    );
+    if (isConfirmed) {
+      const updatedProducts = [...products];
+      updatedProducts.splice(index, 1);
+      setProducts(updatedProducts);
+    }
+  };
+
   return (
     <>
       <div className="container">
@@ -55,116 +74,27 @@ const Form = () => {
               style={{ width: "min(100% - 10px, 40%)" }}
             >
               <ButtonGenerateNumber />
-              <h1 className="fs-3 fw-bold">Detail Product</h1>
-              <div>
-                <label htmlFor="productname" className="form-label">
-                  Product Name
-                </label>
-                <input
-                  type="text"
-                  className={inputClass}
-                  name="productname"
-                  id="productname"
-                  aria-describedby="productname"
-                  style={{ width: "min(100% - 10px, 60%)" }}
-                  autoFocus=""
-                  value={productName}
-                  onChange={handleInputChange}
-                />
-                {!isValid && (
-                  <div className="invalid-feedback">
-                    Product name must be 10 characters or less
-                  </div>
-                )}
-              </div>
-              {/* END PRODUCT NAME */}
-              <div className="has-validation mt-3">
-                <label htmlFor="productcategory" className="form-label">
-                  Product Category :
-                </label>
-                <select
-                  className="form-select mb-3"
-                  style={{ width: "min(100% - 10px, 45%)" }}
-                  value={productCategory}
-                  onChange={(event) => setProductCategory(event.target.value)}
-                >
-                  <option hidden="">Choose...</option>
-                  <option>Food</option>
-                  <option>Fruit</option>
-                  <option>Vegetable</option>
-                </select>
-              </div>
-              {/* END PRODUCTCATEGORY */}
+              <ProductName
+                className={inputClass}
+                value={productName}
+                onChange={handleInputChange}
+              />
+              <ProductCategory
+                value={productCategory}
+                onChange={(event) => setProductCategory(event.target.value)}
+              />
               <ProductImage />
-              <div className="has-validation mt-3">
-                <label className="form-label">Product Freshness :</label>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="radio"
-                    name="freshness"
-                    id="freshness1"
-                    value="Brand New"
-                    checked={productFreshness === "Brand New"}
-                    onChange={(event) =>
-                      setProductFreshness(event.target.value)
-                    }
-                  />
-                  <label className="form-check-label" htmlFor="freshness1">
-                    Brand New
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="radio"
-                    name="freshness"
-                    id="freshness2"
-                    value="Second Hank"
-                    checked={productFreshness === "Second Hank"}
-                    onChange={(event) =>
-                      setProductFreshness(event.target.value)
-                    }
-                  />
-                  <label className="form-check-label" htmlFor="freshness2">
-                    Second Hank
-                  </label>
-                </div>
-                <div className="form-check">
-                  <input
-                    className="form-check-input"
-                    type="radio"
-                    name="freshness"
-                    id="freshness3"
-                    value="Refurbished"
-                    checked={productFreshness === "Refurbished"}
-                    onChange={(event) =>
-                      setProductFreshness(event.target.value)
-                    }
-                  />
-                  <label className="form-check-label" htmlFor="freshness3">
-                    Refurbished
-                  </label>
-                </div>
-              </div>
-              {/* END PRODUCTFRESHNESS */}
+              <ProductFreshness
+                checked1={productFreshness === "Brand New"}
+                checked2={productFreshness === "Second Hank"}
+                checked3={productFreshness === "Refurbished"}
+                onChange={(event) => setProductFreshness(event.target.value)}
+              />
               <ProductDescription />
-              <div className="has-validation mt-3">
-                <label htmlFor="productprice" className="form-label">
-                  Product Price :
-                </label>
-                <input
-                  type="number"
-                  className="form-control"
-                  id="productprice"
-                  name="productprice"
-                  aria-describedby="productprice"
-                  value={productPrice}
-                  onChange={(event) => setProductPrice(event.target.value)}
-                  placeholder="$ 0"
-                />
-              </div>
-              {/* END PRODUCTPRICE */}
+              <ProductPrice
+                value={productPrice}
+                onChange={(event) => setProductPrice(event.target.value)}
+              />
               <ButtonCreateProduct />
             </div>
           </form>
@@ -200,7 +130,12 @@ const Form = () => {
                     <td></td>
                     <td>{product.price}$</td>
                     <td>
-                      <ButtonDelete /> <ButtonEdit />
+                      <ButtonDelete
+                        onDelete={() => {
+                          deleteProduct(index);
+                        }}
+                      />
+                      <ButtonEdit />
                     </td>
                   </tr>
                 ))}

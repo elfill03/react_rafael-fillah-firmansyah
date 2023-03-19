@@ -1,45 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 
-const ProductName = () => {
-  // const [productName, setProductName] = useState("");
-  // const [isValid, setIsValid] = useState(true);
-
-  // const handleInputChange = (event) => {
-  //   const inputValue = event.target.value;
-  //   if (inputValue.length <= 10) {
-  //     setProductName(inputValue);
-  //     setIsValid(true);
-  //   } else {
-  //     setIsValid(false);
-  //   }
-  // };
-
-  // const inputClass = isValid ? "form-control" : "form-control is-invalid";
-
+const ProductName = ({ className, value, onChange, isValid }) => {
   return (
     <>
-      {/* <h1 className="fs-3 fw-bold">Detail Product</h1>
+      <h1 className="fs-3 fw-bold">Detail Product</h1>
       <div>
         <label htmlFor="productname" className="form-label">
           Product Name
         </label>
         <input
           type="text"
-          className={inputClass}
+          className={className}
           name="productname"
           id="productname"
           aria-describedby="productname"
           style={{ width: "min(100% - 10px, 60%)" }}
           autoFocus=""
-          value={productName}
-          onChange={handleInputChange}
+          value={value}
+          onChange={onChange}
         />
         {!isValid && (
           <div className="invalid-feedback">
             Product name must be 10 characters or less
           </div>
         )}
-      </div> */}
+      </div>
     </>
   );
 };
