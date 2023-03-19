@@ -1,5 +1,5 @@
 import React from "react";
-import { ButtonGenerateNumber } from "../../atoms";
+import { ButtonCreateProduct, ButtonGenerateNumber } from "../../atoms";
 import {
   ProductCategory,
   ProductDescription,
@@ -10,7 +10,8 @@ import {
   Title,
 } from "../../molecules";
 
-const MainForm = () => {
+const Form = () => {
+  
   return (
     <>
       <div className="container">
@@ -28,6 +29,7 @@ const MainForm = () => {
               <ProductImage />
               <ProductDescription />
               <ProductPrice />
+              <ButtonCreateProduct/>
               {/* <div
                 className="alert alert-success mt-3"
                 role="alert"
@@ -42,4 +44,4 @@ const MainForm = () => {
   );
 };
 
-export default MainForm;
+export default Form;
