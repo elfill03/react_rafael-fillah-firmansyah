@@ -1,0 +1,10 @@
+.generate {
+  border: none;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: antiquewhite;
+}
+.generate:hover{
+    background-color: rgb(247, 210, 162);
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import { ButtonGenerateNumber } from "../../atoms";
 import {
   ProductCategory,
   ProductDescription,
@@ -20,6 +21,7 @@ const MainForm = () => {
               className="d-grid m-auto has-validation"
               style={{ width: "min(100% - 10px, 40%)" }}
             >
+              <ButtonGenerateNumber/>
               <ProductName />
               <ProductCategory />
               <ProductFreshness />
