@@ -1,0 +1,1 @@
+export {default as bootsraplogo} from "./svg/bootstraplogo.svg"
