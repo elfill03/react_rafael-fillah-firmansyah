@@ -1,8 +1,8 @@
 import React from "react";
 import { img1 } from "../../../assets";
-import "./SubPage.template.style.css"
+import "./SubPage.template.style.css";
 
-const SubPage = ({onNavigate}) => {
+const SubPage = ({ onNavigate }) => {
   return (
     <>
       <link rel="stylesheet" href="src/main.css" />
@@ -79,76 +79,13 @@ const SubPage = ({onNavigate}) => {
               Watch Video
             </a>
           </div>
-          <button onClick={onNavigate} className="watch-bag2 mt-4 ms-4">Move To Create Product</button>
+          <button onClick={onNavigate} className="watch-bag2 mt-4 ms-4">
+            Move To Create Product
+          </button>
         </div>
         <img src={img1} className="img1" alt="" />
       </div>
       <div>
-        {/* <div
-          id="carouselExampleRide"
-          className="carousel slide"
-          data-bs-ride="true"
-        >
-          <div
-            className="carousel-inner"
-            style={{ backgroundColor: "#4e6e814e" }}
-          >
-            <div className="carousel-item active mt-3">
-              <h1 className="ms-auto me-auto w-50 fs-3 fw-bold text-center fst-italic">
-                Interesting Learning
-              </h1>
-              <img
-                src="src/1677124119611.png"
-                className="d-block ms-auto me-auto w-50 pt-4 pb-4"
-                alt="..."
-              />
-            </div>
-            <div className="carousel-item mt-3">
-              <h1 className="ms-auto me-auto w-50 fs-3 fw-bold text-center fst-italic">
-                Hone Skills
-              </h1>
-              <img
-                src="src/1677377609435.png"
-                className="d-block ms-auto me-auto w-50 pt-4 pb-4"
-                alt="..."
-              />
-            </div>
-            <div className="carousel-item mt-3">
-              <h1 className="ms-auto me-auto w-50 fs-3 fw-bold text-center fst-italic">
-                Front-End Engineer
-              </h1>
-              <img
-                src="src/1677377765113.png"
-                className="d-block ms-auto me-auto w-50 pt-4 pb-4"
-                alt="..."
-              />
-            </div>
-            <button
-              className="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleRide"
-              data-bs-slide="prev"
-            >
-              <span
-                className="carousel-control-prev-icon bg-dark"
-                aria-hidden="true"
-              />
-              <span className="visually-hidden">Previous</span>
-            </button>
-            <button
-              className="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleRide"
-              data-bs-slide="next"
-            >
-              <span
-                className="carousel-control-next-icon bg-dark"
-                aria-hidden="true"
-              />
-              <span className="visually-hidden">Next</span>
-            </button>
-          </div>
-        </div> */}
         <center>
           <div className="join">
             <h3>Join Our Newsletter</h3>
