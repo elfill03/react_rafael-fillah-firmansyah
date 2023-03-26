@@ -390,7 +390,8 @@ const WelcomePage = () => {
                           aria-label="Close"
                           onClick={() => {
                             setShowModal(false);
-                            resetForm();}}
+                            resetForm();
+                          }}
                         ></button>
                       </div>
                       <div className="modal-body">
