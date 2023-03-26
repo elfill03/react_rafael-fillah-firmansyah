@@ -27,3 +27,6 @@ i{
 i:hover{
     color: #0a58ca;
 }
+li{
+    list-style:none;
+}
