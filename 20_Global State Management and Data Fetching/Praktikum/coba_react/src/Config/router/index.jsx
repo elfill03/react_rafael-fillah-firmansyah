@@ -1,5 +1,6 @@
 import CreateProduct from "../../views/CreateProduct";
 import LandingPage from "../../views/LandingPage";
+import Counter from "../redux/Counter.view";
 
 const router = [
   {
@@ -9,6 +10,10 @@ const router = [
   {
     path: "/createproduct",
     element: <CreateProduct />,
+  },
+  {
+    path: "/counter",
+    element: <Counter />,
   },
 ];
 

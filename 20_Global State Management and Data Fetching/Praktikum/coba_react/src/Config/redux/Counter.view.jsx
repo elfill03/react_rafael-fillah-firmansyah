@@ -1,37 +1,38 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { counterAction } from "./counterSlice";
+import { cuonterAction } from "./counterSlice";
 
 const Counter = () => {
-  const state = useSelector((state) => state);
+  const state = useSelector((state) => state.counter);
   const dispatch = useDispatch();
+
   return (
-    <>
-      <div>counter {state.angka}</div>
+    <div>
+      <div>Counter {state.angka} </div>
       <div>
         <button
           onClick={() => {
-            dispatch(counterAction.increment());
+            dispatch(cuonterAction.increment());
           }}
         >
           plus
         </button>
         <button
           onClick={() => {
-            dispatch(counterAction.decrement());
+            dispatch(cuonterAction.decrement());
           }}
         >
           minus
         </button>
         <button
           onClick={() => {
-            dispatch(counterAction.reset());
+            dispatch(cuonterAction.reset());
           }}
         >
           reset
         </button>
       </div>
-    </>
+    </div>
   );
 };
 

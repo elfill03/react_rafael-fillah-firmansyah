@@ -6,6 +6,20 @@ const counterSlice = createSlice({
     angka: 110,
   },
   reducers: {
+    decrement: (state) => {
+      return {
+        ...state,
+        angka: state.angka - 1,
+      };
+    },
+
+    reset: (state) => {
+      return {
+        ...state,
+        angka: 110,
+      };
+    },
+
     increment: (state) => {
       return {
         ...state,
@@ -13,21 +27,7 @@ const counterSlice = createSlice({
       };
     },
 
-    decrement: (state) => {
-      return {
-        ...state,
-        angka: state.angka - 1,
-      };
-    },
-    reset: (state) => {
-      return {
-        ...state,
-        angka: 110,
-      };
-    },
   },
 });
 
-const { actions: counterAction, reducer: counterReducer } = counterSlice;
-export { counterAction, counterReducer };
-export default counterSlice;
+export const { actions: cuonterAction, reducer: counterReducer } = counterSlice;
