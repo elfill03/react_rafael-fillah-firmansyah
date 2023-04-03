@@ -1,0 +1,377 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Form.organism.jsx > should render correctly 1`] = `
+<div
+  className="container"
+>
+  <div
+    className="d-grid"
+  >
+    <a
+      className="navbar-brand d-flex justify-content-center mt-4"
+      href="https://getbootstrap.com/"
+    >
+      <img
+        alt="Bootstrap"
+        height={44}
+        src="/src/assets/svg/bootstraplogo.svg"
+        width={50}
+      />
+    </a>
+    <div
+      className="text-center mt-4 mb-4"
+    >
+      <div
+        className="d-flex text-center"
+      >
+        <h1
+          className="fs-4 ms-auto mt-auto mb-auto "
+        >
+          Choose Language: 
+        </h1>
+        <button
+          className="button-language me-auto"
+          onClick={[Function]}
+        >
+          En
+        </button>
+      </div>
+      <h1
+        className="fs-2 fw-bold"
+      >
+        Create Product
+      </h1>
+      <h2
+        className="fs-4 fw-lighter"
+      >
+        Below is an example form built entirely with Bootstrap’s form controls. Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.
+      </h2>
+    </div>
+    <form
+      autoComplete="off"
+      className="needs-validation"
+      onSubmit={[Function]}
+    >
+      <div
+        className="d-grid m-auto has-validation"
+        style={
+          {
+            "width": "min(100% - 10px, 40%)",
+          }
+        }
+      >
+        <button
+          className="generate"
+          onClick={[Function]}
+        >
+          Generate Number
+        </button>
+        <button
+          className="navigation"
+        >
+          Move To Landing Page
+        </button>
+        <h1
+          className="fs-3 fw-bold"
+        >
+          Detail Product
+        </h1>
+        <div>
+          <label
+            className="form-label"
+            htmlFor="productname"
+          >
+            Product Name
+          </label>
+          <input
+            aria-describedby="productname"
+            autoFocus=""
+            className="form-control"
+            id="productname"
+            name="productname"
+            onChange={[Function]}
+            style={
+              {
+                "width": "min(100% - 10px, 60%)",
+              }
+            }
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          className="has-validation mt-3"
+        >
+          <label
+            className="form-label"
+            htmlFor="productcategory"
+          >
+            Product Category :
+          </label>
+          <select
+            className="form-select mb-3"
+            name="productcategory"
+            onChange={[Function]}
+            style={
+              {
+                "width": "min(100% - 10px, 45%)",
+              }
+            }
+            value=""
+          >
+            <option
+              hidden=""
+            >
+              Choose...
+            </option>
+            <option>
+              Food
+            </option>
+            <option>
+              Fruit
+            </option>
+            <option>
+              Vegetable
+            </option>
+          </select>
+        </div>
+        <div
+          className="has-validation mt-3"
+        >
+          <label
+            className="form-label"
+            htmlFor="formFile"
+          >
+            Image of Product
+          </label>
+          <input
+            className="form-control text-primary border border-primary"
+            id="productimage"
+            name="productimage"
+            onChange={[Function]}
+            style={
+              {
+                "width": "min(100% - 10px, 58%)",
+              }
+            }
+            type="file"
+            value=""
+          />
+        </div>
+        <div
+          className="has-validation mt-3"
+        >
+          <label
+            className="form-label"
+          >
+            Product Freshness :
+          </label>
+          <div
+            className="form-check"
+          >
+            <input
+              checked={false}
+              className="form-check-input"
+              id="freshness1"
+              name="productfreshness"
+              onChange={[Function]}
+              type="radio"
+              value="Brand New"
+            />
+            <label
+              className="form-check-label"
+              htmlFor="freshness1"
+            >
+              Brand New
+            </label>
+          </div>
+          <div
+            className="form-check"
+          >
+            <input
+              checked={false}
+              className="form-check-input"
+              id="freshness2"
+              name="productfreshness"
+              onChange={[Function]}
+              type="radio"
+              value="Second Hank"
+            />
+            <label
+              className="form-check-label"
+              htmlFor="freshness2"
+            >
+              Second Hank
+            </label>
+          </div>
+          <div
+            className="form-check"
+          >
+            <input
+              checked={false}
+              className="form-check-input"
+              id="freshness3"
+              name="productfreshness"
+              onChange={[Function]}
+              type="radio"
+              value="Refurbished"
+            />
+            <label
+              className="form-check-label"
+              htmlFor="freshness3"
+            >
+              Refurbished
+            </label>
+          </div>
+        </div>
+        <div
+          className="has-validation mt-3"
+        >
+          <label
+            className="form-label"
+            htmlFor="Description"
+          >
+            Additional Description
+          </label>
+          <textarea
+            className="form-control"
+            id="Description"
+            name="productdescription"
+            onChange={[Function]}
+            rows={4}
+            value=""
+          />
+        </div>
+        <div
+          className="has-validation mt-3"
+        >
+          <label
+            className="form-label"
+            htmlFor="productprice"
+          >
+            Product Price :
+          </label>
+          <input
+            aria-describedby="productprice"
+            className="form-control"
+            id="productprice"
+            name="productprice"
+            onChange={[Function]}
+            placeholder="$ 0"
+            type="number"
+            value={0}
+          />
+        </div>
+        <button
+          className="btn btn-primary m-auto mt-5 mb-5"
+          id="submit"
+          onClick={[Function]}
+          style={
+            {
+              "width": "min(100% - 10px, 90%)",
+            }
+          }
+          type="submit"
+        >
+          Create Product
+        </button>
+      </div>
+    </form>
+    <div
+      className="container m-auto text-center"
+    >
+      <h1
+        className="fw-bold fs-2"
+      >
+        List Product
+      </h1>
+    </div>
+    <div
+      className="container-fluid mb-0"
+    >
+      <table
+        className="table table-light table-striped"
+        id="tableData"
+        style={
+          {
+            "width": "min(100% - 10px, 75%)",
+          }
+        }
+      >
+        <thead>
+          <tr>
+            <th
+              scope="col"
+            >
+              No
+            </th>
+            <th
+              scope="col"
+            >
+              Product Name
+            </th>
+            <th
+              scope="col"
+            >
+              Product Category
+            </th>
+            <th
+              scope="col"
+            >
+              Image of Product
+            </th>
+            <th
+              scope="col"
+            >
+              Product Freshness
+            </th>
+            <th
+              scope="col"
+            >
+              Additional Desciption
+            </th>
+            <th
+              scope="col"
+            >
+              Product Price
+            </th>
+            <th
+              scope="col"
+            >
+              Action
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              1
+            </td>
+            <td />
+            <td />
+            <td />
+            <td />
+            <td />
+            <td>
+              $
+            </td>
+            <td>
+              <button
+                className="Btn-delete"
+                onClick={[Function]}
+              >
+                Delete
+              </button>
+              <button
+                className="Btn-edit"
+              >
+                Edit
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
