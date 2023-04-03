@@ -1,1 +1,4 @@
-Testing
+Tiga poin penting yang telah saya pelajari dari materi “Global State Management and Data Fetching” sebagai berikut:
+1. Global state management adalah konsep untuk mengelola state aplikasi secara global, sehingga state dapat diakses dan diubah oleh berbagai komponen pada aplikasi. Redux adalah salah satu library JavaScript yang dapat digunakan untuk mengimplementasikan global state management pada aplikasi React.
+2. Redux Thunk adalah middleware Redux yang memungkinkan kita untuk melakukan asyncronous data fetching dan melaksanakan logic tambahan sebelum mengirimkan action yang sesuai ke store. Redux Thunk sangat berguna dalam mengambil data dari server dan mengubah state aplikasi berdasarkan data tersebut.
+3. Persisted state adalah state yang disimpan dan dijaga ketika aplikasi dimatikan atau browser ditutup. Redux menyediakan pustaka redux-persist untuk mengimplementasikan persisted state pada aplikasi. Data fetching dapat dilakukan dengan menggunakan API fetch, axios, atau library lainnya. Data yang diambil kemudian dapat disimpan pada global state atau pada komponen yang membutuhkannya.
