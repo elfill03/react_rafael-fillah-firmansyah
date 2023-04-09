@@ -1,1 +1,10 @@
-Testing
+Tiga poin penting yang telah saya pelajari dari materi “React Testing” sebagai berikut:
+1. React testing adalah proses menguji aplikasi React untuk memastikan bahwa aplikasi berfungsi sesuai dengan yang diharapkan dan mengidentifikasi kesalahan atau cacat yang mungkin terjadi. React testing dilakukan menggunakan berbagai jenis framework dan library, termasuk Jest, Enzyme, dan Testing Library. Pengujian dilakukan dengan menggunakan tiga jenis pengujian utama, yaitu pengujian unit, pengujian integrasi, dan pengujian end-to-end.
+2. Dalam melakukan react testing terdapat beberapa tools yang dapat digunakan, diantaranya: Jest, Jest menyediakan fitur seperti snapshot testing, mocking, code coverage, dan masih banyak lagi. Vitest, vitest merupakan Kerangka Pengujian Unit yang Sangat Cepat. React Testing Library, Pendekatan pengujian yang digunakan oleh React Testing Library adalah pengujian fitur (feature testing) atau pengujian perilaku (behavior testing) yang membantu dalam mengetes komponen React dengan cara yang serupa dengan cara pengguna akhir.
+3. Lebih lengkapnya mengenai kategori testing pada react sebagai berikut:
+Unit Testing: Unit testing dilakukan untuk menguji komponen React secara terpisah, biasanya dilakukan dengan mengisolasi komponen dari komponen lainnya.
+Integration Testing: Integration testing dilakukan untuk menguji beberapa komponen yang berinteraksi satu sama lain, untuk memastikan bahwa mereka bekerja dengan baik.
+Functional Testing: Functional testing dilakukan untuk menguji aplikasi secara keseluruhan, untuk memastikan bahwa aplikasi berfungsi dengan baik dari perspektif pengguna.
+End-to-end Testing: End-to-end testing dilakukan untuk menguji aplikasi secara keseluruhan, termasuk interaksi pengguna dan input data, dan menguji aplikasi pada lingkungan yang sama seperti saat digunakan oleh pengguna.
+Snapshot Testing: Snapshot testing adalah teknik testing yang digunakan untuk memastikan bahwa tampilan sebuah komponen React selalu sama dari waktu ke waktu.
+Performance Testing: Performance testing dilakukan untuk memastikan bahwa aplikasi dapat menangani beban kerja yang besar dengan baik, dan tidak mengalami penurunan performa saat digunakan oleh banyak pengguna.
