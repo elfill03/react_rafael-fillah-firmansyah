@@ -9,6 +9,7 @@ const ButtonCreateProduct = ({onClick}) => {
         className="btn btn-primary m-auto mt-5 mb-5"
         style={{ width: "min(100% - 10px, 90%)" }}
         onClick={onClick}
+        data-testid="submitbutton"
       >
         Create Product
       </button>

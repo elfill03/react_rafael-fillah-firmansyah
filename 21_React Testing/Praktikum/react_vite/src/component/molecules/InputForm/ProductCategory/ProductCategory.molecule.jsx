@@ -13,6 +13,7 @@ const ProductCategory = ({value, onChange}) => {
           value={value}
           onChange={onChange}
           name="productcategory"
+          id="productcategory"
         >
           <option hidden="">Choose...</option>
           <option>Food</option>

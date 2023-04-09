@@ -1,10 +1,12 @@
 import React from "react";
 
-const ProductFreshness = ({checked, onChange}) => {
+const ProductFreshness = ({ checked, onChange }) => {
   return (
     <>
-      <div className="has-validation mt-3">
-        <label className="form-label">Product Freshness :</label>
+      <div className="has-validation mt-3" data-testid="productfreshness">
+        <label htmlFor="productfreshness" className="form-label">
+          Product Freshness :
+        </label>
         <div className="form-check">
           <input
             className="form-check-input"

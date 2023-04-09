@@ -30,7 +30,7 @@ const Schema = Yup.object().shape({
   productdescription: Yup.string()
     .min(5)
     .max(150)
-    .required("Please fill this field!"),
+    .required("Please fill this fdescription!"),
   productprice: Yup.number().positive().required("Please fill the price!"),
 });
 
@@ -76,6 +76,7 @@ const Form = ({ onNavigate }) => {
         <div className="d-grid">
           <CreateProductTitle />
           <form
+            id="createForm"
             className="needs-validation"
             autoComplete="off"
             onSubmit={formik.handleSubmit}
@@ -99,6 +100,7 @@ const Form = ({ onNavigate }) => {
               <ProductCategory
                 onChange={formik.handleChange}
                 value={formik.values.productcategory}
+                data-testid="productcategory-input"
               />
               {formik.errors.productcategory && (
                 <div className="error-msg">{formik.errors.productcategory}</div>

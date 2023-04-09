@@ -3,7 +3,7 @@ import { React, useEffect, useRef } from "react";
 const ProductName = ({ value, onChange }) => {
   const inputRef = useRef("");
   useEffect(() => {
-    inputRef.current.focus();
+    inputRef.current;
   }, []);
   return (
     <>
@@ -23,6 +23,7 @@ const ProductName = ({ value, onChange }) => {
           value={value}
           onChange={onChange}
           ref={inputRef}
+          data-testid="productname"
         />
       </div>
     </>
