@@ -1,1 +1,4 @@
-Testing
+Tiga poin penting yang telah saya perlajari dari materi “Restfull API with Javascript” sebagai berikut:
+1. Beberapa karakteristik Restfull API antara lain: Menggunakan protokol HTTP sebagai metode komunikasi antara client dan server, menggunakan URL sebagai alamat untuk mengakses sumber daya, menggunakan HTTP methods (GET, POST, PUT, DELETE) untuk mengakses atau memodifikasi sumber daya, menggunakan format data yang ringan seperti JSON atau XML.
+2. Dalam implementasi Restfull API, pengembang dapat menggunakan berbagai tools dan teknologi seperti Node.js, Express, MongoDB, dan Swagger untuk mendokumentasikan dan menguji API mereka. Kelebihan dari menggunakan Restfull API adalah dapat memudahkan integrasi dengan berbagai aplikasi dan layanan, sehingga dapat memperluas jangkauan aplikasi dan meningkatkan pengalaman pengguna.
+3. Contoh Implementasi Restfull API menggunakan MockAPI adalah salah satu cara untuk membuat dan menguji API tanpa memerlukan server backend. MockAPI menyediakan antarmuka untuk membuat spesifikasi API dengan menggunakan format JSON dan menyediakan URL palsu yang dapat digunakan untuk mengakses sumber daya yang dibuat.
