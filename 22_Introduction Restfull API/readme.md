@@ -1,1 +1,4 @@
-Testing
+Tiga poin penting yang telah saya pelajari dari materi “Introduction Restfull API” sebagai berikut:
+1. Restfull API (Representational State Transfer) adalah salah satu jenis arsitektur API yang digunakan untuk mengakses sumber daya dan layanan web melalui protokol HTTP. Restfull API didasarkan pada prinsip-prinsip REST, yang bertujuan untuk membuat API yang mudah dipahami, dapat diakses oleh berbagai aplikasi, dan dapat digunakan dengan mudah oleh pengguna. API (Application Programming Interface) adalah kumpulan aturan, protokol, dan alat yang memungkinkan aplikasi untuk berinteraksi satu sama lain
+2. JSON (JavaScript Object Notation) adalah format pertukaran data ringan yang banyak digunakan dalam Restfull API. JSON biasanya digunakan sebagai format data yang dikirim antara server dan klien dalam bentuk objek.
+3. HTTP response code adalah kode status yang digunakan dalam protokol HTTP untuk memberikan informasi tentang hasil dari permintaan HTTP. Ada banyak kode respons yang berbeda, tetapi beberapa yang paling umum adalah kode 404 Not Found, dan kode 500 Internal Server Error.
