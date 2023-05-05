@@ -1,1 +1,4 @@
-Testing
+Tiga poin penting yang telah saya perlajari dari materi “Introduction GraphQL and Apollo Client Setup” sebagai berikut:
+1. GraphQL adalah bahasa kueri yang dikembangkan oleh Facebook pada tahun 2012 dan dirilis pada tahun 2015. GraphQL digunakan untuk memproses dan memanipulasi data dalam API (Application Programming Interface). GraphQL memungkinkan pengguna untuk mencari data tertentu dan hanya meminta data yang mereka butuhkan, mengurangi jumlah data yang dikirim dan mempercepat aplikasi.
+2. Di GraphQL, pengguna dapat mengirim satu kueri untuk mengambil data dari beberapa titik akhir, sedangkan di REST, pengguna harus mengirim banyak permintaan untuk mengambil data dari beberapa titik akhir. GraphQL juga menawarkan fitur seperti sistem tipe, introspeksi, dan arahan untuk membantu pengembang mengelola dan memanipulasi data. 
+3. Terdapat 3 fitur utama pada GraphQl Client yakni: query untuk mengambil data, mutation untuk menambah, mengubah, dan menghapus data, dan subscription untuk update data secara realtime.
