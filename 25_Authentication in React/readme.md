@@ -1,1 +1,4 @@
-Testing
+Tiga poin penting yang telah saya perlajari dari materi “Authentication in React” sebagai berikut:
+1. Otentikasi dalam React adalah proses verifikasi identitas pengguna sebelum mengakses aplikasi atau fitur tertentu. Ini dilakukan dengan menggunakan berbagai teknologi dan protokol seperti OAuth, Token Web JSON (JWT), dan cookie sesi. React memiliki berbagai library dan framework yang dapat digunakan untuk mengimplementasikan fitur autentikasi seperti Firebase, Passport, dan Auth0.
+2. Salah satu fitur login yang diimplementasikan dengan React adalah form login. Formulir login memungkinkan pengguna untuk memasukkan nama pengguna dan kata sandi, yang kemudian diverifikasi oleh sistem otentikasi. Setelah pengguna masuk, sistem autentikasi menyediakan akses ke halaman atau fungsi tertentu dari aplikasi.
+3. Selain form login, dimungkinkan untuk menerapkan fungsi autentikasi lain di React, seperti Autentikasi media sosial, autentikasi multi-faktor, dan autentikasi biometrik. Semua fitur tersebut memiliki tujuan yang sama, yaitu untuk memastikan keamanan dan privasi pengguna saat menggunakan program atau fitur tertentu.
