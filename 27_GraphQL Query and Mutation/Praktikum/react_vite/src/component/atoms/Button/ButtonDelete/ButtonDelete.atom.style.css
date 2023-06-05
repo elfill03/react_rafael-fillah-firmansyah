@@ -1,0 +1,11 @@
+.Btn-delete{
+  background-color: red;
+  color: whitesmoke;
+  font-size: 14px;
+  border-radius: 4px;
+  width: 80px;
+  border: none;
+}
+.Btn-delete:hover{
+  background-color: rgb(164, 0, 0);
+}

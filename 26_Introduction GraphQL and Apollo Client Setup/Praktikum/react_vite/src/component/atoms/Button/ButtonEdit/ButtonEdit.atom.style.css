@@ -1,0 +1,11 @@
+.Btn-edit{
+  background-color: rgb(0, 215, 0);
+  color: whitesmoke;
+  font-size: 14px;
+  border-radius: 4px;
+  width: 80px;
+  border: none;
+}
+.Btn-edit:hover{
+  background-color: green;
+}

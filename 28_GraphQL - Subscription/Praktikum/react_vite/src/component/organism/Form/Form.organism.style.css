@@ -1,0 +1,15 @@
+.navigation {
+  border: none;
+  margin-bottom: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background-color: rgb(232, 250, 215);
+}
+.navigation:hover {
+  background-color: rgb(196, 255, 140);
+}
+.error-msg{
+  color: red;
+  font-size: 16px;
+  margin-top: 5px;
+}
