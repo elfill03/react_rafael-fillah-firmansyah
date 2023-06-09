@@ -1,11 +1,10 @@
-import axios from "axios";
+import { gql, useMutation, useQuery } from "@apollo/client";
 import { useFormik } from "formik";
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import * as Yup from "yup";
 import { useProductListSelector } from "../../../Config/redux/ProductList/productListSelector";
 import { productAction } from "../../../Config/redux/ProductList/productSlice";
-
 import {
   ButtonCreateProduct,
   ButtonDelete,
@@ -23,6 +22,42 @@ import {
 } from "../../molecules";
 import "./Form.organism.style.css";
 
+const GetProductlist = gql`
+  query MyQuery {
+    List_products {
+      id
+      productcategory
+      productdescription
+      productfreshness
+      productimage
+      productname
+      productprice
+    }
+  }
+`;
+
+const CREATE_PRODUCT_MUTATION = gql`
+  mutation CreateProduct($product: List_products_insert_input!) {
+    insert_List_products_one(object: $product) {
+      id
+      productname
+      productcategory
+      productimage
+      productfreshness
+      productdescription
+      productprice
+    }
+  }
+`;
+
+const DELETE_PRODUCT_MUTATION = gql`
+  mutation DeleteProduct($id: Int!) {
+    delete_List_products_by_pk(id: $id) {
+      id
+    }
+  }
+`;
+
 const Schema = Yup.object().shape({
   productname: Yup.string().min(2).max(20).required("Please fill this field!"),
   productcategory: Yup.string().required("Please choose Product Category!"),
@@ -31,13 +66,47 @@ const Schema = Yup.object().shape({
   productdescription: Yup.string()
     .min(5)
     .max(150)
-    .required("Please fill this fdescription!"),
+    .required("Please fill this description!"),
   productprice: Yup.number().positive().required("Please fill the price!"),
 });
 
 const Form = ({ onNavigate }) => {
   const productList = useProductListSelector();
   const dispatch = useDispatch();
+
+  const { loading, error, data } = useQuery(GetProductlist);
+
+  useEffect(() => {
+    if (!loading && data) {
+      dispatch(productAction.set(data.List_products));
+    }
+  }, [loading, data, dispatch]);
+
+  const [deleteProduct] = useMutation(DELETE_PRODUCT_MUTATION, {
+    update(cache, { data: { delete_List_products_by_pk } }) {
+      cache.modify({
+        fields: {
+          List_products(existingProducts = []) {
+            return existingProducts.filter(
+              (product) => product.id !== delete_List_products_by_pk.id
+            );
+          },
+        },
+      });
+    },
+  });
+
+  const [createProduct] = useMutation(CREATE_PRODUCT_MUTATION, {
+    update(cache, { data: { insert_List_products_one } }) {
+      cache.modify({
+        fields: {
+          List_products(existingProducts = []) {
+            return [...existingProducts, insert_List_products_one];
+          },
+        },
+      });
+    },
+  });
 
   const formik = useFormik({
     initialValues: {
@@ -49,53 +118,34 @@ const Form = ({ onNavigate }) => {
       productprice: 0,
     },
     validationSchema: Schema,
-    onSubmit: (values, { resetForm }) => {
-      axios
-        .post(
-          "https://643b9a2070ea0e660297037c.mockapi.io/products/products",
-          values
-        )
-        .then((response) => {
-          dispatch(productAction.add([...productList, response.data]));
-          resetForm();
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+    onSubmit: async (values, { resetForm }) => {
+      try {
+        await createProduct({ variables: { product: values } });
+        resetForm();
+      } catch (error) {
+        console.log(error);
+      }
     },
   });
 
-  const deleteProduct = (index) => {
+  const handleDeleteProduct = (productId) => {
     const isConfirmed = window.confirm(
       "Are you sure you want to delete this product?"
     );
     if (isConfirmed) {
-      const productToDelete = productList[index];
-      axios
-        .delete(
-          `https://643b9a2070ea0e660297037c.mockapi.io/products/products/${productToDelete.id}`
-        )
-        .then(() => {
-          const updatedProducts = [...productList];
-          updatedProducts.splice(index, 1);
-          dispatch(productAction.delete([...updatedProducts]));
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      deleteProduct({ variables: { id: productId } }).catch((error) => {
+        console.log(error);
+      });
     }
   };
 
-  useEffect(() => {
-    axios
-      .get("https://643b9a2070ea0e660297037c.mockapi.io/products/products")
-      .then((response) => {
-        dispatch(productAction.set(response.data));
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }, []);
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
 
   return (
     <>
@@ -185,7 +235,7 @@ const Form = ({ onNavigate }) => {
                   <th scope="col">Product Category</th>
                   <th scope="col">Image of Product</th>
                   <th scope="col">Product Freshness</th>
-                  <th scope="col">Additional Desciption</th>
+                  <th scope="col">Additional Description</th>
                   <th scope="col">Product Price</th>
                   <th scope="col">Action</th>
                 </tr>
@@ -203,7 +253,7 @@ const Form = ({ onNavigate }) => {
                     <td>
                       <ButtonDelete
                         onDelete={() => {
-                          deleteProduct(index);
+                          handleDeleteProduct(values.id);
                         }}
                       />
                       <ButtonEdit />
